@@ -17,8 +17,10 @@ classdef TreeNode < handle
 	%	- Root: the top-most Ancestor, it does not have a parent.
 
 	properties
+
 		parent TreeNode {mustBeScalarOrEmpty}
-		children TreeNode = TreeNode.empty
+		children TreeNode
+		
 	end
 
 	methods
