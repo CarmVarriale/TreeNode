@@ -1,4 +1,4 @@
-classdef TreeNode < handle & matlab.mixin.Heterogeneous
+classdef TreeNode < handle
 	% Hierarchical tree data structure.
 	%
 	% This class implements a hierarchical tree data structure, where each
