@@ -55,14 +55,16 @@ classdef TreeNode < handle
 				node (1,1) TreeNode
 				parent TreeNode {mustBeScalarOrEmpty} = TreeNode.empty
 			end
-			assert(parent ~= node, ...
-				"TreeNode:set:parent", ...
-				"Node cannot be its own parent");
+			if ~isempty(parent)
+				assert(parent ~= node, ...
+					"TreeNode:set:parent", ...
+					"Node cannot be its own parent");
+				parent.addChild(node);
+			end
 			if ~isempty(node.parent)
 				node.parent.remChild(node)
 			end
 			node.parent = parent;
-			parent.addChild(node);
 		end
 
 	end
