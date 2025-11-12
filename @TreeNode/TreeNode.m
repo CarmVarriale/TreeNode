@@ -8,13 +8,12 @@ classdef TreeNode < handle
 	%
 	% Each node can have zero or one parent, and zero or one or multiple
 	% children. Some definitions:
-	%	- Parent: a node 1 level up in the hierarchy.
-	%	- Child: a node 1 level down in the hierarchy.
-	%	- Siblings: nodes with the same parent, therefore at the same level
-	%	of the hierarchy
-	%	- Ancestor: a node N levels up in the hierarchy (N >=1).
-	%	- Descendant: a node N levels down in the hierarchy (N >=1).
-	%	- Root: the top-most Ancestor, it does not have a parent.
+	% - Parent: a node 1 level up in the hierarchy.
+	% - Child: a node 1 level down in the hierarchy.
+	% - Siblings: nodes with the same parent.
+	% - Ancestor: a node N levels up in the hierarchy (N >=1).
+	% - Descendant: a node N levels down in the hierarchy (N >=1).
+	% - Root: the top-most Ancestor, it does not have a parent.
 
 	properties
 
